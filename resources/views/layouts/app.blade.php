@@ -36,8 +36,8 @@
 
   <body>
     <!-- Nav Bar -->
-    <div class="main-container"> 
-    
+    <div>
+
       <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top" aria-label="Offcanvas navbar large ">
         <div class="container-fluid">
           <a class="navbar-brand" href="/" text-dark>
@@ -63,9 +63,9 @@
                 <!-- <li class="nav-item">
                   <a class="nav-link" href="/contact">CONTACT</a>
                 </li> -->
-                
-                
-                
+
+
+
 
                 @auth
 
@@ -76,7 +76,7 @@
                 <li class="nav-item">
                   <a class="nav-link" href="/profile">PROFILE</a>
                 </li>
-                
+
                 <li class="nav-item">
                   <form action="{{route('logout')}}" method="POST">
                   @csrf
@@ -85,7 +85,7 @@
                 </li>
 
                 @else
-                
+
                 <li class="nav-item">
                   <a class="nav-link" href="{{route('login')}}">SIGN IN</a>
                 </li>
@@ -93,11 +93,11 @@
                   <a class="nav-link" href="{{route('register')}}">SIGN UP</a>
                 </li> -->
                 @endauth
-                    
+
                   </ul>
                 </li>
               </ul>
-            
+
             </div>
           </div>
         </div>
@@ -109,9 +109,9 @@
     <div class="container-fluid bg-light " >
       <footer class="flex-wrap py-3 d-flex justify-content-between align-items-center">
         <p class="mb-0 col-md-4 text-muted">&copy; 2023 Baby Dawn</p>
-    
-        
-    
+
+
+
         <ul class="nav col-md-4 justify-content-end">
           <li class="nav-item"><a href="/" class="px-2 nav-link text-muted">Home</a></li>
           <li class="nav-item"><a href="about" class="px-2 nav-link text-muted">About</a></li>

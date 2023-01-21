@@ -55,6 +55,12 @@
         rel="shortcut icon"
         href="{{ asset('images/favicon.png') }}"
     />
+
+    <style>
+        .form-control, .form-select{
+            height: 2.8rem;
+        }
+    </style>
 </head>
 
 <body>
@@ -192,7 +198,7 @@
                     <li class="nav-item">
                         <a
                             class="nav-link"
-                            href="#"
+                            href="{{ route('admin.records.index') }}"
                         >
                             <i class="mdi mdi-account-circle-outline menu-icon"></i>
                             <span class="menu-title">Birth Records</span>
