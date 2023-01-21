@@ -12,4 +12,12 @@ class DashboardController extends Controller
         // dd('here');
         return view('admin.index');
     }
+
+    // public function __invoke()
+    // {
+    //     // dd('here');
+    //     return view('admin.baby-records.search');
+    // }
+
+
 }

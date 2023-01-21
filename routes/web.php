@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\BabyRecordController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\DoctorController;
 use App\Http\Controllers\Admin\HospitalController;
@@ -54,6 +55,15 @@ Route::resource('posts', PostController::class)->middleware('auth');
 
 Route::name('admin.')->middleware('auth')->prefix('admin')->group(function () {
     Route::get('dashboard', DashboardController::class)->name('index');
+    // Route::get('dashboard/search', DashboardController::class);
+
+    Route::prefix('records')->name('records.')->group(function(){
+        Route::get('', [BabyRecordController::class, 'index'])->name('index');
+        Route::get('search', [BabyRecordController::class, 'search'])->name('search');
+        Route::get('create', [BabyRecordController::class, 'create'])->name('create');
+    });
+
+
 
     Route::resource('hospitals', HospitalController::class);
     Route::resource('doctors', DoctorController::class);
@@ -62,3 +72,5 @@ Route::name('admin.')->middleware('auth')->prefix('admin')->group(function () {
 Route::name('doctors.')->middleware('auth')->prefix('doctor/dashboard')->group(function () {
     Route::get('', DoctorDashboardController::class)->name('index');
 });
+
+
