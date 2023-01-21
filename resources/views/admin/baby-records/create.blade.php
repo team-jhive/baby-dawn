@@ -1,4 +1,5 @@
 @extends('layouts.admin')
+@section('title', 'Baby Records')
 @section('content')
 <div class="col-md-5 mx-auto">
     <div class="card">
@@ -36,7 +37,32 @@
                       </select>
                       </div>
 
+                      <div class="col-12 mb-3">
+                        <label for="inputAddress2" class="form-label">Address </label>
+                        <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+                      </div>
 
+                      <div class="row g-3 m-3">
+                        <div class="col-md-4">
+                            <label for="inputCity" class="form-label">City</label>
+                            <input type="text" class="form-control" id="inputCity" placeholder="City">
+                          </div>
+                          <div class="col-md-4">
+                            <label for="inputState" class="form-label">State</label>
+                            <select id="inputState" class="form-select">
+                              <option selected>Choose...</option>
+                              <option>...</option>
+                            </select>
+                          </div>
+                          <div class="col-md-4">
+                            <label for="inputState" class="form-label">LGA</label>
+                            <select id="inputState" class="form-select">
+                              <option selected>Choose...</option>
+                              <option>...</option>
+                            </select>
+                          </div>
+
+                      </div>
 
                       <div class="mb-3">
                         <label for="formGroupExampleInput" class="form-label">Weight</label>
@@ -47,8 +73,6 @@
                         <label for="formGroupExampleInput2" class="form-label">Height</label>
                         <input type="text" class="form-control border border-success" id="formGroupExampleInput2" placeholder="Height">
                       </div>
-
-
 
                       <div class="mb-3">
                         <label for="formGroupExampleInput2" class="form-label">Date and Time of Delivery</label>

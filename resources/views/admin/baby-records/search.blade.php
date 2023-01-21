@@ -1,5 +1,5 @@
 @extends('layouts.admin')
-{{-- @section('title', 'Create Doctor') --}}
+@section('title', 'Search Records')
 @section('content')
 
 <div class="col-md-8 mx-auto py-5 ">

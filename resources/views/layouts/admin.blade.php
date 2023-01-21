@@ -8,7 +8,7 @@
         name="viewport"
         content="width=device-width, initial-scale=1, shrink-to-fit=no"
     >
-    <title>Star Admin2 </title>
+    <title>Admin</title>
     <!-- plugins:css -->
     <link
         rel="stylesheet"
@@ -82,17 +82,18 @@
                         class="navbar-brand brand-logo"
                         href="admin.html"
                     >
-                        <img
+                        {{-- <img
                             src="{{ asset('images/logo.svg') }}"
                             alt="logo"
-                        />
+                        /> --}}
+                        BABY-DAWN
                     </a>
                     <a
                         class="navbar-brand brand-logo-mini"
                         href="admin.html"
                     >
                         <img
-                            src="{{ asset('images/logo-mini.svg') }}"
+                            src="{{ asset('assets/images/logo.png') }}"
                             alt="logo"
                         />
                     </a>
