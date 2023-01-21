@@ -1,10 +1,16 @@
 <?php
 
-use App\Http\Controllers\HomeController;
+use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\DoctorController;
+use App\Http\Controllers\Admin\HospitalController;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\FrontController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\Doctor\DashboardController as DoctorDashboardController;
+use App\Http\Controllers\FrontController;
+use App\Models\Hospital;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,9 +39,26 @@ Route::get('user', [HomeController::class, 'profile']);
 
 Route::get('baby_entry', [HomeController::class, 'baby_entry']);
 
-Route::get('admin', [AdminController::class, 'admin']);
+
+Route::get('redirect', function (Request $request) {
+    if (!$request->user()) return redirect()->route('login');
+
+    return redirect()->route('admin.index');
+});
 
 
 // Route::get('posts', [PostController::class, 'index']);
 
 Route::resource('posts', PostController::class)->middleware('auth');
+
+
+Route::name('admin.')->middleware('auth')->prefix('admin')->group(function () {
+    Route::get('dashboard', DashboardController::class)->name('index');
+
+    Route::resource('hospitals', HospitalController::class);
+    Route::resource('doctors', DoctorController::class);
+});
+
+Route::name('doctors.')->middleware('auth')->prefix('doctor/dashboard')->group(function () {
+    Route::get('', DoctorDashboardController::class)->name('index');
+});

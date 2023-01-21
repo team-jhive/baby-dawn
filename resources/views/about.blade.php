@@ -30,7 +30,7 @@
             It is the <br> collaboration of brilliant developers from various tech sectors to develop
             <br>cutting-edge solutions to user challenges.
           </p>
-          <ul class="list">
+          <ul style="ist-style-type: circle !important">
             <li>We use facts, not views, in our works.</li>
             <li>We establish a connection between your company's goals and the requirements of your customers.</li>
             <li>We create experiences that are user-centered, tested with actual users, and quaranteed to work.</li>
@@ -39,7 +39,7 @@
 
         </div>
       </div>
-      
+
     </div>
 
 

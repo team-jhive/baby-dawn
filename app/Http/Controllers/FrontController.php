@@ -9,9 +9,7 @@ class FrontController extends Controller
 {
     public function index()
     {
-        $posts = Post::all();
-        return view('index', ['posts' => $posts]);
-        //return view('index');
+        return view('index');
     }
 
     public function about()
@@ -29,5 +27,5 @@ class FrontController extends Controller
     //     return view('home');
     // }
 
-    
+
 }
