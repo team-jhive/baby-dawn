@@ -1,11 +1,10 @@
 <?php
 
-use App\Models\Hospital;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateBabiesTable extends Migration
+return new class extends Migration
 {
     /**
      * Run the migrations.
@@ -14,7 +13,7 @@ class CreateBabiesTable extends Migration
      */
     public function up()
     {
-        Schema::create('babies', function (Blueprint $table) {
+        Schema::create('baby_records', function (Blueprint $table) {
             $table->id();
             $table->foreignIdFor(Hospital::class);
             $table->string('name');
@@ -42,6 +41,6 @@ class CreateBabiesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('babies');
+        Schema::dropIfExists('baby_records');
     }
-}
+};

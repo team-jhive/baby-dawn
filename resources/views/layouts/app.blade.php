@@ -70,7 +70,7 @@
                 @auth
 
                 <li class="nav-item">
-                  <a class="nav-link" href="/home">Account</a>
+                  <a class="nav-link" href="/home">Account </a>
                 </li>
 
                 <li class="nav-item">
@@ -87,7 +87,7 @@
                 @else
 
                 <li class="nav-item">
-                  <a class="nav-link" href="{{route('login')}}">Signin</a>
+                  <a class="nav-link" href="{{route('login')}}">Sign in</a>
                 </li>
                 <!-- <li class="nav-item">
                   <a class="nav-link" href="{{route('register')}}">SIGN UP</a>

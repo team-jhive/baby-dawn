@@ -61,6 +61,7 @@ Route::name('admin.')->middleware('auth')->prefix('admin')->group(function () {
         Route::get('', [BabyRecordController::class, 'index'])->name('index');
         Route::get('search', [BabyRecordController::class, 'search'])->name('search');
         Route::get('create', [BabyRecordController::class, 'create'])->name('create');
+        Route::post('store', [BabyRecordController::class, 'store'])->name('store');
     });
 
 
